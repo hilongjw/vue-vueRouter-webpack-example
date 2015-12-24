@@ -1,11 +1,11 @@
 {
-  "name": "vue-loader-example",
-  "version": "2.0.0",
-  "description": "Example using Webpack with vue-loader",
+  "name": "vue-vueRouter-webpack-example",
+  "version": "1.0.0",
+  "description": "vue-vueRouter-webpack-example",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --inline --hot --quiet",
-    "build": "export NODE_ENV=production && webpack --progress --hide-modules"
+    "dev": "webpack-dev-server --inline --hot --config build/webpack.dev.config.js",
+    "build": "webpack --progress --hide-modules --config build/webpack.prod.config.js"
   },
   "dependencies": {
     "vue": "^1.0.0",
@@ -13,6 +13,7 @@
     "vue-resource": "^0.1.17"
   },
   "devDependencies": {
+    "autoprefixer": "^6.2.1",
     "babel-core": "^6.1.2",
     "babel-loader": "^6.1.0",
     "babel-plugin-transform-runtime": "^6.1.2",
@@ -20,6 +21,9 @@
     "babel-preset-stage-0": "^6.1.2",
     "babel-runtime": "^6.0.14",
     "css-loader": "^0.21.0",
+    "eslint": "^1.10.3",
+    "eslint-loader": "^1.1.1",
+    "url-loader": "^0.5.7",
     "file-loader": "^0.8.4",
     "jade": "^1.11.0",
     "style-loader": "^0.13.0",
@@ -31,6 +35,5 @@
     "webpack": "^1.12.2",
     "webpack-dev-server": "^1.12.0"
   },
-  "author": "Evan You",
-  "license": "MIT"
+  "author": "hilongjw"
 }

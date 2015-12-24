@@ -1,7 +1,12 @@
 ## Setup
+
 ``` bash
 npm install
 npm run dev
+```
+
+``` bash
+npm run build
 ```
 
 ## 目录结构
@@ -10,9 +15,14 @@ npm run dev
 │  package.json        # 项目配置
 │  readme.md           # 项目说明
 │  index.html          # 首页
-│  webpack.config.js   # webpack 配置文件
 │
 ├─node_modules
+│
+├─build
+│     │  webpack.base.config.js         # webpack 基础配置
+│     │  webpack.dev.config.js          # webpack 开发配置
+│     └─ webpack.prod.config.js         # webpack 生产配置
+│
 └─src
     │  app.vue         # 主vue
     │  main.js         # 启动配置，配置路由，过滤器
