@@ -1,8 +1,10 @@
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
+
 module.exports = {
   entry: './src/main.js',
   output: {
-    path: './dist',
-    publicPath: 'dist/',
+    path: '/dist',
+    publicPath: '/dist/',
     filename: 'build.js'
   },
   module: {
@@ -69,10 +71,19 @@ module.exports = {
     ]
   },
   vue: {
-    autoprefixer: {
-      browsers: ['last 2 versions']
-    }
+        loaders: {
+            css: ExtractTextPlugin.extract(
+              "style-loader",
+              "css-loader?sourceMap",
+              {
+                publicPath: "../dist/"
+              }
+            )
+        }
   },
+  plugins: [
+      new ExtractTextPlugin("style.css")
+  ],
   babel: {
     presets: ['es2015', 'stage-0'],
     plugins: ['transform-runtime']
