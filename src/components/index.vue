@@ -2,24 +2,24 @@
 export default {
     data() {
             
-            var cc = Math.round(Math.random() * 10);
+        var cc = Math.round(Math.random() * 10);
 
-            return {
-                Index: {
-                    bgimg:'bg'+cc,
-                    siteInfo: {
-                        sitename: "去吃啥？"
-                    }
+        return {
+            Index: {
+                bgimg:'bg'+cc,
+                siteInfo: {
+                    sitename: "去吃啥？"
                 }
             }
-
-        },
-        methods: {
-            goBack: function(e) {
-                history.go(-1);
-            }
-
         }
+
+    },
+    methods: {
+        goBack: function(e) {
+            history.go(-1);
+        }
+
+    }
 }
 </script>
 <template>
