@@ -29,7 +29,10 @@ npm run build
 │
 └─src
     │  app.vue         # 主vue
-    │  main.js         # 启动配置，配置路由，过滤器
+    │  main.js         # 启动配置
+    │  router.js       # 路由
+    │  filter.js       # 过滤器
+    │  directive.js    # 指令
     │
     ├─components       # 组件
     │      index.vue
